@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AddeducationService {
-  private baseUrl = 'http://localhost:8080/education/add';
+  private baseUrl = 'http://localhost:8080/user/education/create';
   constructor(private http: HttpClient) {
    }
 
