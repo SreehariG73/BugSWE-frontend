@@ -7,6 +7,8 @@ import { InformationComponent } from './information/information.component';
 import { EducationComponent } from './education/education.component';
 import { VoluntaryDisclosureComponent } from './voluntary-disclosure/voluntary-disclosure.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { SkillsComponent } from './skills/skills.component';
+import { WeblinksComponent } from './weblinks/weblinks.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent}, 
@@ -14,8 +16,10 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'information',component:InformationComponent},
   {path:'education',component:EducationComponent},
-  {path:'voluntary-disclosure',component:VoluntaryDisclosureComponent},
-  {path:'experience',component:ExperienceComponent}];
+  {path:'voluntarydisclosure',component:VoluntaryDisclosureComponent},
+  {path:'experience',component:ExperienceComponent},
+  {path:'skills',component:SkillsComponent},
+  {path:'weblinks',component:WeblinksComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
