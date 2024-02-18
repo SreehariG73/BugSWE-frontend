@@ -12,6 +12,7 @@ import { VoluntaryDisclosureComponent } from './voluntary-disclosure/voluntary-d
 import { ExperienceComponent } from './experience/experience.component';
 import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
