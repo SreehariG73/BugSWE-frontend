@@ -81,10 +81,13 @@ function generatePieChart(canvasId, data, title) {
                 display: true,
                 text: title,
                 fontSize: 16,
-                fontColor: '#333'
+                fontColor: 'white'
             },
             legend: {
-                position: 'right'
+                position: 'right',
+                labels: {
+                    fontColor: 'white' // Set legend text color to white
+                }
             }
         }
     });
