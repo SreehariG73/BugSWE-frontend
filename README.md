@@ -2,10 +2,10 @@
 
 # Team Members
 
-Sreehari Guruprasad
-Harshitha Girish
-Mahesh Kumar
-Kunal Sanghvi
+Sreehari Guruprasad <br />
+Harshitha Girish <br />
+Mahesh Kumar <br />
+Kunal Sanghvi <br />
 
 Our production code is in Master branch!
 
