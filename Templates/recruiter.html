@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Search Filter</title>
+    <title>Recruiter Interface with Pie Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="piechart.js" defer></script>
     <link rel="stylesheet" href="recruiter_styles.css">
 </head>
 <body>
@@ -33,6 +35,10 @@
             <button id="searchBtn">Search</button>
         </div>
         
+        <div id="output" class="output">
+            <!-- Output from filters will be displayed here -->
+        </div>
+
         <div id="resultsContainer" class="results">
             <!-- Results will be displayed here -->
         </div>
@@ -45,7 +51,24 @@
             </div>
         </div>
     </div>
-    
+    <div class="left-chart">
+        <div class="chart-item">
+            <canvas id="skillChart" width="250" height="250"></canvas>
+            <div class="chart-title">Top 5 - Skills</div>
+            <canvas id="stateChart" width="250" height="250"></canvas>
+            <div class="chart-title">Top 5 - State</div>
+        </div>
+    </div>
+    <div class="right-chart">
+        <div class="chart-item">
+            <canvas id="experienceChart" width="250" height="250"></canvas>
+            <div class="chart-title">Experience</div>
+        </div>
+        <div class="chart-item">
+            <canvas id="jobRolesChart" width="250" height="250"></canvas>
+            <div class="chart-title">Top 5 - Job Roles</div>
+        </div>
+    </div>
     <script src="recruiter_script.js"></script>
 </body>
 </html>

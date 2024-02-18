@@ -1,22 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #66aef7; /* Light gray background */
+    font-family: 'Montserrat', sans-serif;
+    margin: -20px 0 50px;
+    background: #f87b98;
+    background: -webkit-linear-gradient(to right, #ff8e7a, #F87B98);
+    background: linear-gradient(to right, #ff8e7a, #F87B98);
 }
 
 .container {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff; /* White background */
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 h1 {
     text-align: center;
-    color: #007bff; /* Blue header color */
+    color: #FF4B2B;
+    font-size: 36px; /* Larger font size */
+    font-weight: bold; /* Bolder font weight */
+    background: linear-gradient(to right, #FF4B2B, #FF416C); /* Highlight background */
+    background-clip: initial;
+    -webkit-background-clip: text; /* Apply text clipping for background */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
 }
 
 .filters {
@@ -24,42 +31,46 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+    width: 100%; /* Adjust to the width of the container */
 }
 
 .filters select, .filters input[type="text"], .filters button {
     margin: 5px;
-    padding: 10px;
-    border: 1px solid #ced4da; /* Light gray border */
-    border-radius: 5px;
+    padding: 15px; /* Increase padding for larger size */
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Increase border-radius for a smoother look */
+    flex: 1; /* Adjusts to the available width */
+    max-width: 250px; /* Maximum width for inputs */
 }
 
 .filters select {
-    width: 200px;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark gray text */
+    background-color: #fff;
+    color: #333;
 }
 
 .filters input[type="text"] {
-    width: 300px;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark gray text */
+    background-color: #fff;
+    color: #333;
+    width: auto; /* Allow input to adjust width based on content */
 }
 
 .filters button {
-    background-color: #007bff; /* Blue button */
-    color: #ffffff; /* White text */
+    background-color: #FF4B2B;
+    color: #fff;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
+    width: auto; /* Allow button to adjust width based on content */
 }
 
+
 .filters button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #FF6347;
 }
 
 .results {
     text-align: center;
-    margin-top: 20px; /* Add some spacing between filters and results */
+    margin-top: 25px; /* Add some spacing between filters and results */
 }
 
 .results-table {
@@ -84,7 +95,7 @@ h1 {
 }
 
 .odd-row {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 /* Modal Styles */
@@ -121,4 +132,34 @@ h1 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Left side pie charts */
+.left-chart {
+    position: fixed;
+    left: 20px;
+    top: 50%; /* Adjust the vertical position as needed */
+    transform: translateY(-50%);
+    z-index: 1000; /* Ensure the charts are above other content */
+}
+
+/* Right side pie charts */
+.right-chart {
+    position: fixed;
+    right: 20px;
+    top: 50%; /* Adjust the vertical position as needed */
+    transform: translateY(-50%);
+    z-index: 1000; /* Ensure the charts are above other content */
+}
+
+/* Common styling for both charts */
+.chart-item canvas {
+    width: 250px; /* Adjust width of the charts */
+    height: auto;
+}
+
+.chart-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color:white;
 }
