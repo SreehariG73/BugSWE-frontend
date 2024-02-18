@@ -1,0 +1,64 @@
+/* Apply global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #FFFFFF;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 50px; /* Adjusted padding for top and bottom */
+    border-radius: 8px; /* Added border-radius for consistency */
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); /* Added box-shadow for depth effect */
+    max-height: 98vh; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background-color: #eee;
+    border: none;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 16px; /* Adjusted margin for better spacing */
+}
+
+button:hover {
+    background-color: #FF416C;
+}
