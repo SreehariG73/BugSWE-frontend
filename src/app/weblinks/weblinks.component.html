@@ -1,13 +1,13 @@
 <div class="links-container">
     <form (ngSubmit)="submitForm()" #linksForm="ngForm">
       <label for="github">GitHub Profile:</label>
-      <input type="url" id="github" name="github" [(ngModel)]="links.githubLink" placeholder="https://github.com/yourusername">
+      <input type="url" id="github" name="github" [(ngModel)]="links.githubUrl" placeholder="https://github.com/yourusername">
   
       <label for="portfolio">Portfolio:</label>
-      <input type="url" id="portfolio" name="portfolio" [(ngModel)]="links.portfolioLink" placeholder="https://yourportfolio.com">
+      <input type="url" id="portfolio" name="portfolio" [(ngModel)]="links.resumeUrl" placeholder="https://yourportfolio.com">
   
       <label for="linkedin">LinkedIn Profile:</label>
-      <input type="url" id="linkedin" name="linkedin" [(ngModel)]="links.linkedinLink" placeholder="https://www.linkedin.com/in/yourname">
+      <input type="url" id="linkedin" name="linkedin" [(ngModel)]="links.linkedInUrl" placeholder="https://www.linkedin.com/in/yourname">
   
       <!-- Add more fields for additional links as needed -->
   

@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AddlinksService {
-  private baseUrl = 'http://localhost:8080/link/addlink';
+  private baseUrl = 'http://localhost:8080/links/create';
   constructor(private http:HttpClient) {
    }
 

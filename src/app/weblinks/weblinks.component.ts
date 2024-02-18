@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AddlinksService } from '../addlinks.service';
-import { NgForm } from '@angular/forms';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-weblinks',
@@ -9,12 +9,19 @@ import { NgForm } from '@angular/forms';
 })
 export class WeblinksComponent {
   links={
-    githubLink:  '',
-    portfolioLink:'',
-    linkedinLink:''
+    userUuid: '',
+    githubUrl:  '',
+    resumeUrl: '',
+    linkedInUrl: ''
   };
   
-    constructor(private addLinksService: AddlinksService) {}
+    constructor(
+      private addLinksService: AddlinksService,
+      private LoginService: LoginService) {}
+
+    ngOnInit() {
+      this.links.userUuid = this.LoginService.getUUID();
+    }
     submitForm() {
       this.addLinksService.addlinks(this.links).subscribe((data) => {
         console.log(data);

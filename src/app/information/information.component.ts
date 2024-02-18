@@ -18,7 +18,8 @@ export class InformationComponent {
       state: '',
       country: '',
       zipCode: '',
-      userUuid: ''
+      userUuid: '',
+      role: ''
       // ... other properties
     };
 
