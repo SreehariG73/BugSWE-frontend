@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AddeducationService } from '../addeducation.service';
 
 @Component({
   selector: 'app-education',
@@ -18,6 +20,12 @@ export class EducationComponent {
       endDate: '',
       present: false,
       gpa: ''
+    });
+  }
+  constructor(private addeducationService:AddeducationService) { }
+  onSubmit(form: NgForm) {
+    this.addeducationService.addeducation(this.educationBlocks).subscribe((data) => {
+      console.log(data);
     });
   }
 

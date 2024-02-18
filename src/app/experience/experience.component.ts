@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AddexperienceService } from '../addexperience.service';
+
 
 @Component({
   selector: 'app-experience',
@@ -21,5 +24,10 @@ export class ExperienceComponent {
     removeExperienceBlock(index: number) {
       this.experienceBlocks.splice(index, 1);
     }
+    constructor(private addexperienceService:AddexperienceService) { }
+    onSubmit(form: NgForm) {
+    this.addexperienceService.addexperience(this.experienceBlocks).subscribe((data) => {
+      console.log(data);
+    });
 }
-
+}

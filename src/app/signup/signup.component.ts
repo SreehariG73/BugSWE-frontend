@@ -20,8 +20,9 @@ export class SignupComponent {
   }
   constructor(private signupService: SignupService) { }
   onSubmit(form: NgForm) {
-    this.signupService.signup(this.user).subscribe((data) => {
+    this.signupService.signup(this.user).subscribe((data: any) => {
       form.reset();
+      
       console.log(data);
     });
   }

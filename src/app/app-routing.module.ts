@@ -11,7 +11,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { WeblinksComponent } from './weblinks/weblinks.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent}, 
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: 'login', component: LoginComponent}, 
   {path:'signup', component: SignupComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'information',component:InformationComponent},
