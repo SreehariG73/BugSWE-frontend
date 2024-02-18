@@ -1,0 +1,34 @@
+<div class="information-container">
+  <form (ngSubmit)="submitForm()" #informationForm="ngForm">
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="selectedGender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="ethnicity">Ethnicity:</label>
+    <select id="ethnicity" name="ethnicity" [(ngModel)]="selectedEthnicity" required>
+      <option value="asian">Asian</option>
+      <option value="black">Black</option>
+      <option value="hispanic">Hispanic</option>
+      <option value="white">White</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="veteranStatus">Veteran Status:</label>
+    <select id="veteranStatus" name="veteranStatus" [(ngModel)]="selectedVeteranStatus" required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="disability">Do you have a disability?</label>
+    <select id="disability" name="disability" [(ngModel)]="selectedDisability" required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <button type="submit">Save</button>
+    <button type="button" routerLink="/skills">Next</button>
+  </form>
+</div>

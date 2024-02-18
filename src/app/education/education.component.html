@@ -1,0 +1,33 @@
+
+  <div id="education-container">
+    <div *ngFor="let block of educationBlocks; let i = index" class="education-block">
+      <label for="university">University Name:</label>
+      <input type="text" [(ngModel)]="block.university" name="university[]" required>
+
+      <label for="degree">Degree:</label>
+      <input type="text" [(ngModel)]="block.degree" name="degree[]" required>
+
+      <label for="major">Major:</label>
+      <input type="text" [(ngModel)]="block.major" name="major[]" required>
+
+      <label for="startDate">Start Date:</label>
+      <input type="date" [(ngModel)]="block.startDate" name="startDate[]" required>
+
+      <label for="endDate">End Date:</label>
+      <input type="date" [(ngModel)]="block.endDate" name="endDate[]" required>
+
+      <label for="present">Present: </label>
+      <input type="checkbox" [(ngModel)]="block.present" name="present[]">
+
+      <label for="gpa">GPA:</label>
+      <input type="text" [(ngModel)]="block.gpa" name="gpa[]">
+
+      <button type="button" class="remove-button" (click)="removeEducationBlock(i)">✖</button>
+    </div>
+  </div>
+
+  <button type="button" (click)="addEducationBlock()">Add Education</button>
+
+  <button type="submit">Save</button>
+  <button type="button" routerLink="/experience">Next</button>
+

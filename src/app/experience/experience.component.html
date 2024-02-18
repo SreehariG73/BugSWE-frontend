@@ -1,0 +1,30 @@
+<div id="experience-container">
+    <div *ngFor="let block of experienceBlocks; let i = index" class="experience-block">
+      <label for="position">Position:</label>
+      <input type="text" [(ngModel)]="block.position" name="position[]" required>
+  
+      <label for="company">Company:</label>
+      <input type="text" [(ngModel)]="block.company" name="company[]" required>
+
+      <label for="company">Company City:</label>
+      <input type="text" [(ngModel)]="block.company_city" name="company_city[]" required>
+
+      <label for="company">Company Country:</label>
+      <input type="text" [(ngModel)]="block.company_country" name="company_country[]" required>
+  
+      <label for="startDate">Start Date:</label>
+      <input type="date" [(ngModel)]="block.startDate" name="startDate[]" required>
+  
+      <label for="endDate">End Date:</label>
+      <input type="date" [(ngModel)]="block.endDate" name="endDate[]" required>
+  
+      <label for="details">Details:</label>
+      <textarea [(ngModel)]="block.details" name="details[]" rows="4"></textarea>
+  
+      <button type="button" class="remove-button" (click)="removeExperienceBlock(i)">✖</button>
+    </div>
+  </div>
+  
+  <button type="button" (click)="addExperienceBlock()">Add Experience</button>
+  <button type="button" [routerLink]="['/voluntarydisclosure']">Next</button>
+  
