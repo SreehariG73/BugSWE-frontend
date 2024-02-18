@@ -16,6 +16,7 @@ import { WeblinksComponent } from './weblinks/weblinks.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-das
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
