@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,13 @@ import { Router } from '@angular/router';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-  constructor(private router: Router) { }
-
+  firstName: string = '';
+  constructor(private router: Router, private loginService: LoginService) { }
+  ngOnInit() {
+  this.firstName = this.loginService.getfirstName();
+  }
   logout() {
+    this.loginService.setUUID('');
     this.router.navigate(['/login']);
   }
 

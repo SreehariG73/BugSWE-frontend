@@ -23,6 +23,7 @@ export class SignupComponent {
     this.signupService.signup(this.user).subscribe((data: any) => {
       form.reset();
       console.log(data);
+      alert(data.message);
     });
   }
 
