@@ -1,0 +1,25 @@
+<div class="skills-container">
+    <form (ngSubmit)="submitForm()" #skillsForm="ngForm">
+      <label for="skills">Select your skills:</label>
+      <select id="skills" name="skills" [(ngModel)]="selectedSkill" multiple required>
+        <!-- Dynamically populated list of skills from the component -->
+        <!-- Replace the values with actual skills from your component -->
+        <option *ngFor="let skill of sskillsList" [value]="skill">{{ skill }}</option>
+      </select>
+  
+      <div>
+        <p>Selected Skills:</p>
+        <ul>
+          <li *ngFor="let skill of selectedSkillsList; let i = index">
+            {{ skill }}
+            <button type="button" (click)="removeSelectedSkill(i)">Remove</button>
+          </li>
+        </ul>
+      </div>
+  
+      <button type="button" (click)="addSelectedSkill()">Add Skill</button>
+      <button type="submit">Save</button>
+      <button type="button" routerLink="/weblinks">Next</button>
+    </form>
+  </div>
+  

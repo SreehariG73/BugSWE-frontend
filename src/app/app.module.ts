@@ -11,6 +11,8 @@ import { EducationComponent } from './education/education.component';
 import { VoluntaryDisclosureComponent } from './voluntary-disclosure/voluntary-disclosure.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FormsModule } from '@angular/forms';
+import { SkillsComponent } from './skills/skills.component';
+import { WeblinksComponent } from './weblinks/weblinks.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     InformationComponent,
     EducationComponent,
     VoluntaryDisclosureComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    SkillsComponent,
+    WeblinksComponent
   ],
   imports: [
     BrowserModule,
