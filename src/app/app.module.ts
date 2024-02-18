@@ -15,6 +15,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { WeblinksComponent } from './weblinks/weblinks.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     VoluntaryDisclosureComponent,
     ExperienceComponent,
     SkillsComponent,
-    WeblinksComponent
+    WeblinksComponent,
+    RecruiterDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

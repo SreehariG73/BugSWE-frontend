@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent {
     email: '',
     password: ''
   };
-constructor(private loginService: LoginService) { }
+constructor(private loginService: LoginService, private router: Router) { }
   submitForm(form: NgForm) {
     // Handle login logic using this.credentials
       this.loginService.login(this.credentials).subscribe((data:any) => {
@@ -22,8 +23,9 @@ constructor(private loginService: LoginService) { }
           console.log(data["data"].uuid);
           console.log("User Logged in Successfully");
           this.loginService.setUUID(data["data"].uuid);
+          this.router.navigate(['/information']);
         }
-      
+        
         // console.log(this.loginService.getUUID());
       });
 

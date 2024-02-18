@@ -5,12 +5,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LoginService {
-  private uuid:String = '';
+  private uuid:string = '';
   constructor(private http: HttpClient) { }
-  getUUID(){
+  public getUUID(){
     return this.uuid;
    }
-  setUUID(uuid:String){
+  public setUUID(uuid:string){
     this.uuid = uuid;
   }
   private baseUrl = 'http://localhost:8080/user/login';

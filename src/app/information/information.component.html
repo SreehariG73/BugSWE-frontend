@@ -1,18 +1,13 @@
 <form (ngSubmit)="submitForm()" #informationForm="ngForm">
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" [(ngModel)]="info.firstName" required>
-  
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" [(ngModel)]="info.lastName" required>
   
     <label for="phoneNumber">Phone Number:</label>
     <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="info.phoneNumber" required>
   
-    <label for="phoneType">Type for Phone Number:</label>
-    <select id="phoneType" name="phoneType" [(ngModel)]="info.phoneType" required>
-      <option value="home">Home</option>
-      <option value="work">Work</option>
-      <option value="mobile">Mobile</option>
+    <label for="type">Type for Phone Number:</label>
+    <select id="type" name="type" [(ngModel)]="info.type" required>
+      <option value="HOME">Home</option>
+      <option value="WORK">Work</option>
+      <option value="MOBILE">Mobile</option>
     </select>
   
     <label for="streetAddress">Street Address:</label>
