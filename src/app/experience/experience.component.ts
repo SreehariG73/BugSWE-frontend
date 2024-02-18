@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AddexperienceService } from '../addexperience.service';
 import { LoginService } from '../login.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-experience',
@@ -49,9 +50,10 @@ export class ExperienceComponent {
         // console.log("herer")
         // console.log("uuid" , this.loginService.getUUID())
       }
-    submitForm() {
+    submitForm(experienceForm: NgForm) {
+      if (experienceForm.valid) {
     this.addexperienceService.addexperience(this.experienceBlocks).subscribe((data) => {
       console.log(data);
     });
 }
-}
+}}

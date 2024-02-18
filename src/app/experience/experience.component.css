@@ -73,3 +73,35 @@ textarea {
   height: 120px; /* Set the desired height */
   resize: vertical; /* Allow vertical resizing */
 }
+
+.remove-button {
+  position: absolute; /* Position the remove button absolutely */
+  top: 0px; /* Adjust the top position */
+  right: 10px; /* Adjust the right position */
+  background-color: #FF4B2B; /* Background color */
+  color: #FFFFFF; /* Text color */
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 25px; /* Center content vertically */
+  text-align: center; /* Center content horizontally */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.remove-button:hover {
+  background-color: #FF416C; /* Change background color on hover */
+}
+.experience-block {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Adjusted width for full width */
+  margin-top: 20px; /* Adjusted margin for spacing between blocks */
+  padding: 20px; /* Added padding for inner content */
+}

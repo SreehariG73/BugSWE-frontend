@@ -1,21 +1,16 @@
-
 <body>
   <div class="container" id="container">
     <div class="form-container log-in-container">
       <form (ngSubmit)="submitForm(loginForm)" #loginForm="ngForm">
         <h1>Login</h1>
-        <!-- <div class="social-container">
-          <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
-          <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
-        </div>
-        <span>or use your account</span> -->
+        <br>
+        <!-- Remove or modify social container and related elements as needed -->
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" [(ngModel)]="credentials.email" required>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" [(ngModel)]="credentials.password" required>
-
-        <a href="#">Forgot your password?</a>
+<br><br>
         <button type="submit">Log In</button>
       </form>
     </div>
