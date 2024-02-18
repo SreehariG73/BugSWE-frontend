@@ -1,25 +1,22 @@
-  <!-- <form action="/your-server-endpoint" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
+  <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+  
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+  
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="user.dob" required>
+  
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+  
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-
-    <button type="submit">Sign Up</button>
-  </form> -->
-
-  <form (ngSubmit)="onSubmit()">
-    <input type="text" [(ngModel)]="user.username" name="username" placeholder="Username" required>
-    <input type="password" [(ngModel)]="user.password" name="password" placeholder="Password" required>
-    <input type="email" [(ngModel)]="user.email" name="email" placeholder="Email" required>
-    <input type="date" [(ngModel)]="user.dob" name="dob" placeholder="Date of Birth" required>
-    <label>
-      <input type="checkbox" [(ngModel)]="user.isrecruiter" name="isrecruiter"> Are you a recruiter?
-    </label>
+    <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+  
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" required>
+  
     <button type="submit">Sign Up</button>
   </form>
-  
-

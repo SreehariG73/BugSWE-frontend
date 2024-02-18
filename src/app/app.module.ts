@@ -6,15 +6,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HttpClientModule } from '@angular/common/http';
+import { InformationComponent } from './information/information.component';
+import { EducationComponent } from './education/education.component';
+import { VoluntaryDisclosureComponent } from './voluntary-disclosure/voluntary-disclosure.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { FormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    InformationComponent,
+    EducationComponent,
+    VoluntaryDisclosureComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

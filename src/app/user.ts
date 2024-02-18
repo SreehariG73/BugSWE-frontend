@@ -1,8 +1,10 @@
 export interface User {
     uuid: number;
-    username: string;
+    firstName: string;
+    lastName: string;
     password: string;
+    confirmPassword: string;
     email: string;
-    dob: string
+    dateofBirth: string
     isrecruiter: boolean;
 }
