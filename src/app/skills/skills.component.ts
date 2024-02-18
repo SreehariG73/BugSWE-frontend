@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FetchskillsService } from '../fetchskills.service';
+import { SkillsService } from '../skills.service';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,22 +11,44 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
   sskillsList: string[] = ['HTML', 'CSS', 'JavaScript']; // Replace with actual skills from your database
   selectedSkill: string = '';
-  selectedSkillsList: string[] = [];
+  skilldata={
+    userUuid: '',
+    skills: [] as string[]
+  }
+
+  constructor(
+    private fetchskills: FetchskillsService, 
+    private skills:SkillsService, 
+    private loginService: LoginService) {}
+  ngOnInit(){
+    this.fetchskills.fetchSkills().subscribe((data: any) => {
+      console.log(data['data'].skills);
+      this.sskillsList = data['data'].skills;
+    });
+    this.skilldata.userUuid = this.loginService.getUUID();
+  }
 
   addSelectedSkill() {
-    if (this.selectedSkill && !this.selectedSkillsList.includes(this.selectedSkill)) {
-      this.selectedSkillsList.push(this.selectedSkill);
+    if (this.selectedSkill && !this.skilldata.skills.includes(this.selectedSkill)) {
+      this.skilldata.skills.push(this.selectedSkill);
       this.selectedSkill = ''; // Clear the selected skill after adding
     }
   }
 
+  // selectedSkillsList: any[] = []; // Initialize selectedSkillsList as an empty array of type any
+
   removeSelectedSkill(index: number) {
-    this.selectedSkillsList.splice(index, 1);
+    this.skilldata.skills.splice(index, 1);
   }
 
   submitForm() {
     // Handle form submission logic using this.selectedSkillsList
-    console.log('Skills form submitted!', this.selectedSkillsList);
+    // this.skilldata.skills = this.selectedSkillsList as []; // Update the type to any[]
+    this.skilldata.skills = this.skilldata.skills.flat();
+    this.skills.addSkills(this.skilldata).subscribe((data) => {
+      console.log(data);
+    });
+    console.log('Skills form submitted!', this.skilldata.skills); // Fix the typo in the property name
   }
 
 }

@@ -1,30 +1,30 @@
 <body>
 <div class="information-container">
-  <form (ngSubmit)="submitForm()" #informationForm="ngForm">
+  <form (ngSubmit)="submitForm(voluntarydisclosureForm)" #voluntarydisclosureForm="ngForm">
     <label for="gender">Gender:</label>
-    <select id="gender" name="gender" [(ngModel)]="selectedGender" required>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="other">Other</option>
+    <select id="gender" name="gender" [(ngModel)]="voluntaryDisclosure.gender" required>
+      <option value="MALE">Male</option>
+      <option value="FEMALE">Female</option>
+      <option value="OTHER">Other</option>
     </select>
 
-    <label for="ethnicity">Ethnicity:</label>
-    <select id="ethnicity" name="ethnicity" [(ngModel)]="selectedEthnicity" required>
-      <option value="asian">Asian</option>
-      <option value="black">Black</option>
-      <option value="hispanic">Hispanic</option>
-      <option value="white">White</option>
-      <option value="other">Other</option>
+    <label for="ethinicity">Ethnicity:</label>
+    <select id="ethinicity" name="ethinicity" [(ngModel)]="voluntaryDisclosure.ethinicity" required>
+      <option value="ASIAN">Asian</option>
+      <option value="BLACK">Black</option>
+      <option value="HISPANIC">Hispanic</option>
+      <option value="WHITE">White</option>
+      <option value="OTHER">Other</option>
     </select>
 
     <label for="veteranStatus">Veteran Status:</label>
-    <select id="veteranStatus" name="veteranStatus" [(ngModel)]="selectedVeteranStatus" required>
+    <select id="veteranStatus" name="veteranStatus" [(ngModel)]="voluntaryDisclosure.veteranStatus" required>
       <option value="yes">Yes</option>
       <option value="no">No</option>
     </select>
 
     <label for="disability">Do you have a disability?</label>
-    <select id="disability" name="disability" [(ngModel)]="selectedDisability" required>
+    <select id="disability" name="disability" [(ngModel)]="voluntaryDisclosure.disabled" required>
       <option value="yes">Yes</option>
       <option value="no">No</option>
     </select>

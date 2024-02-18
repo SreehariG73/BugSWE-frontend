@@ -11,7 +11,7 @@
       <div>
         <p>Selected Skills:</p>
         <ul>
-          <li *ngFor="let skill of selectedSkillsList; let i = index">
+          <li *ngFor="let skill of skilldata.skills; let i = index">
             {{ skill }}
             <button type="button" (click)="removeSelectedSkill(i)">Remove</button>
           </li>

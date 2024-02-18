@@ -16,13 +16,12 @@ export class SignupComponent {
     confirmPassword: '',
     email: '',
     dob: '',
-    isrecruiter: false
+    isRecruiter: false
   }
   constructor(private signupService: SignupService) { }
   onSubmit(form: NgForm) {
     this.signupService.signup(this.user).subscribe((data: any) => {
       form.reset();
-      
       console.log(data);
     });
   }

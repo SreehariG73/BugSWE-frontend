@@ -20,10 +20,15 @@ constructor(private loginService: LoginService, private router: Router) { }
         form.reset();
         // console.log(data);
         if (data["message"] === 'User Logged in successfully') {
-          console.log(data["data"].uuid);
+          console.log(data);
           console.log("User Logged in Successfully");
           this.loginService.setUUID(data["data"].uuid);
-          this.router.navigate(['/information']);
+          if (data["data"].isRecruiter==false){
+          this.router.navigate(['/dashboard']);
+          }
+          else{
+            this.router.navigate(['/recruiterDashboard']);
+          }
         }
         
         // console.log(this.loginService.getUUID());

@@ -40,10 +40,7 @@ export class EducationComponent {
     private loginService: LoginService
     ) { }
     ngOnInit() {
-      // Get the UUID from the LoginService instance
       this.educationBlocks.userUuid = this.loginService.getUUID();
-      // console.log("herer")
-      // console.log("uuid" , this.loginService.getUUID())
     }    
   submitForm(educationForm: NgForm) {
     if (educationForm.valid) {

@@ -20,8 +20,11 @@
         
           <label for="confirmPassword">Confirm Password:</label>
           <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" required>
+
+          <label for="isRecruiter">Is Recruiter:</label>
+          <input type="checkbox" id="isRecruiter" name="isRecruiter" [(ngModel)]="user.isRecruiter">
         
-          <button type="submit" [routerLink]="['/login']">Sign Up</button>
+          <button type="submit" (click)="onSubmit(signupForm)" [routerLink]="['/login']">Sign Up</button>
           <br>
           <button type="submit" [routerLink]="['/login']"> Log In </button>
         </form>
