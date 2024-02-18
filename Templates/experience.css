@@ -178,7 +178,7 @@ input {
 
 .remove-button {
     position: absolute; /* Position the remove button absolutely */
-    top: 0px; /* Adjust the top position */
+    top: 0x; /* Adjust the top position */
     right: 10px; /* Adjust the right position */
     background-color: #FF4B2B; /* Background color */
     color: #FFFFFF; /* Text color */
@@ -198,12 +198,12 @@ input {
     background-color: #FF416C; /* Change background color on hover */
 }
 
-#education-container {
+#experience-container {
     max-height: 700px; /* Adjust the maximum height as needed */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.education-block {
+.experience-block {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
