@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { FetchskillsService } from '../fetchskills.service';
-import { SkillsService } from '../skills.service';
-import { LoginService } from '../login.service';
+import { FetchskillsService } from '../services/fetchskills.service';
+import { SkillsService } from '../services/skills.service';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-skills',

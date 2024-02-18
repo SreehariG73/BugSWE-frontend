@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AddexperienceService } from '../addexperience.service';
-import { LoginService } from '../login.service';
+import { AddexperienceService } from '../services/addexperience.service';
+import { LoginService } from '../services/login.service';
 import { NgForm } from '@angular/forms';
 
 @Component({

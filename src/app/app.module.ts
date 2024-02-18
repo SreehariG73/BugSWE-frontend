@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './services/app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -16,7 +16,7 @@ import { WeblinksComponent } from './weblinks/weblinks.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
-import { LoginService } from './login.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
