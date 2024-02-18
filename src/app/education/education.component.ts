@@ -12,26 +12,26 @@ export class EducationComponent {
    
   educationBlocks = {
     userUuid: '',
-    educationdetails: [
+    educationDetails: [
       {
-        university: '',
+        universityName: '',
         degree: '',
         major: '',
         startDate: '',
         endDate: '',
-        present: false,
+        city: '',
         gpa: ''
       }
     ]
   };
   addEducationBlock() {
-    this.educationBlocks.educationdetails.push({
-      university: '',
+    this.educationBlocks.educationDetails.push({
+      universityName: '',
       degree: '',
       major: '',
       startDate: '',
       endDate: '',
-      present: false,
+      city: '',
       gpa: ''
     });
   }
@@ -45,14 +45,14 @@ export class EducationComponent {
       // console.log("herer")
       // console.log("uuid" , this.loginService.getUUID())
     }    
-  onSubmit(form: NgForm) {
+  submitForm() {
     this.addeducationService.addeducation(this.educationBlocks).subscribe((data) => {
       console.log(data);
     });
   }
 
   removeEducationBlock(index: number) {
-    this.educationBlocks.educationdetails.splice(index, 1);
+    this.educationBlocks.educationDetails.splice(index, 1);
   }
 
 }
