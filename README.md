@@ -1,5 +1,22 @@
 # cvCenter | BugSWE
 
+# Team Members
+
+Sreehari Guruprasad
+Harshitha Girish
+Mahesh Kumar
+Kunal Sanghvi
+
+Our production code is in Master branch!
+
+## Please find the github url for front end application
+
+https://github.com/Harshitha-g-06/BugSWE-frontend
+
+## Please find the github url for back end application
+
+https://github.com/maheshhmahi/cvCenter
+
 ## Use Case
 
 Title - Bridging the Gap: The Impact of Inefficient Job Searches on Individuals and Recruiters
@@ -30,7 +47,7 @@ Despite the scale of these challenges, there are opportunities for improvement.A
 
 ## Here comes our Solution
 
-We are developing a Data Warehouse containing all resumes submitted by job seekers. Recruiters will have the ability to access potential candidates through various filters such as skills, job roles, location, and experience. Additionally, we will provide insights into our data pool, allowing recruiters to adjust their filters accordingly. Due to time constraints for the hackathon, we have developed a proof of concept using Angular JS, HTML, and CSS for the frontend, communicating with our Java Spring Boot backend. Our data is securely stored in PostgreSQL. We have many features planned, including pre-screening of job seeker data and ranking potential candidates to streamline the recruitment process.
+We are developing a Data Warehouse containing all resumes submitted by job seekers. Recruiters will have the ability to access potential candidates through various filters such as skills, job roles, location, and experience. Additionally, we will provide insights into our data pool, allowing recruiters to adjust their filters accordingly. Due to time constraints for the hackathon, we have developed a proof of concept using Angular, HTML, and CSS for the frontend, communicating with our Java Spring Boot backend. Our data is securely stored in PostgreSQL. We have many features planned, including pre-screening of job seeker data and ranking potential candidates to streamline the recruitment process.
 
 ## References
 
@@ -44,24 +61,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run ng generate component component-name to generate a new component. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run ng build to build the project. The build artifacts will be stored in the dist/ directory.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run ng test to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run ng e2e to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use ng help or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+### The backend is built using Spring boot and java, PostgreSql is used for database and redis cloud for caching
+### The fronend is built using Angular, HTML and CSS.
