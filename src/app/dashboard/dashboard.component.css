@@ -12,10 +12,22 @@
   height: 100vh;
 }
 
+.dashboard-container h2{
+  color: #FFFFFF; /* Set text color to white */
+  text-align: center; /* Center align text */
+  font-size: 35px; /* Set font size to 24 pixels (adjust as needed) */
+}
+
+.dashboard-container p {
+  color: #FFFFFF; /* Set text color to white */
+  text-align: center; /* Center align text */
+  font-size: 20px; /* Set font size to 24 pixels (adjust as needed) */
+}
+
 .dashboard-container h1 {
   font-weight: bold;
   margin: 20px 0;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .options-box {
