@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { AddexperienceService } from '../addexperience.service';
-
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-experience',
@@ -9,14 +8,27 @@ import { AddexperienceService } from '../addexperience.service';
   styleUrl: './experience.component.css'
 })
 export class ExperienceComponent {
-    experienceBlocks: any[] = [];
+    experienceBlocks = {
+      userUuid: '',
+      experienceDetails: [
+        {
+        positionName: '',
+        companyName: '',
+        city: '',
+        country: '',
+        startDate: '',
+        endDate: '',
+        details: ''
+        }
+      ]
+    };
   
     addExperienceBlock() {
-      this.experienceBlocks.push({
-        position: '',
-        company: '',
-        company_city: '',
-        company_country: '',
+      this.experienceBlocks.experienceDetails.push({
+        positionName: '',
+        companyName: '',
+        city: '',
+        country: '',
         startDate: '',
         endDate: '',
         details: ''
@@ -25,10 +37,19 @@ export class ExperienceComponent {
     }
   
     removeExperienceBlock(index: number) {
-      this.experienceBlocks.splice(index, 1);
+      this.experienceBlocks.experienceDetails.splice(index, 1);
     }
-    constructor(private addexperienceService:AddexperienceService) { }
-    onSubmit(form: NgForm) {
+    constructor(
+      private addexperienceService:AddexperienceService,
+      private loginService: LoginService
+      ) { }
+      ngOnInit() {
+        // Get the UUID from the LoginService instance
+        this.experienceBlocks.userUuid = this.loginService.getUUID();
+        // console.log("herer")
+        // console.log("uuid" , this.loginService.getUUID())
+      }
+    submitForm() {
     this.addexperienceService.addexperience(this.experienceBlocks).subscribe((data) => {
       console.log(data);
     });

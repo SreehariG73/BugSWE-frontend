@@ -1,16 +1,17 @@
+<form (ngSubmit)="submitForm()" #educationForm="ngForm"> 
 <div id="experience-container">
-    <div *ngFor="let block of experienceBlocks; let i = index" class="experience-block">
-      <label for="position">Position:</label>
-      <input type="text" [(ngModel)]="block.position" name="position[]" required>
+    <div *ngFor="let block of experienceBlocks.experienceDetails; let i = index" class="experience-block">
+      <label for="positionName">Position:</label>
+      <input type="text" [(ngModel)]="block.positionName" name="positionName[]" required>
   
-      <label for="company">Company:</label>
-      <input type="text" [(ngModel)]="block.company" name="company[]" required>
+      <label for="companyName">Company:</label>
+      <input type="text" [(ngModel)]="block.companyName" name="companyName[]" required>
 
-      <label for="company">Company City:</label>
-      <input type="text" [(ngModel)]="block.company_city" name="company_city[]" required>
+      <label for="city">Company City:</label>
+      <input type="text" [(ngModel)]="block.city" name="city[]" required>
 
-      <label for="company">Company Country:</label>
-      <input type="text" [(ngModel)]="block.company_country" name="company_country[]" required>
+      <label for="country">Company Country:</label>
+      <input type="text" [(ngModel)]="block.country" name="country[]" required>
   
       <label for="startDate">Start Date:</label>
       <input type="date" [(ngModel)]="block.startDate" name="startDate[]" required>
@@ -24,7 +25,8 @@
       <button type="button" class="remove-button" (click)="removeExperienceBlock(i)">✖</button>
     </div>
   </div>
-  
   <button type="button" (click)="addExperienceBlock()">Add Experience</button>
+  <button type="submit">Save</button>
   <button type="button" [routerLink]="['/voluntarydisclosure']">Next</button>
+  </form>
   
