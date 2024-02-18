@@ -1,14 +1,22 @@
-<form (ngSubmit)="submitForm()" #informationForm="ngForm">
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Page</title>
+</head>
+<body>
+  <form (ngSubmit)="submitForm(informationForm)" #informationForm="ngForm">
     <label for="phoneNumber">Phone Number:</label>
     <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="info.phoneNumber" required>
-  
+
     <label for="type">Type for Phone Number:</label>
     <select id="type" name="type" [(ngModel)]="info.type" required>
       <option value="HOME">Home</option>
       <option value="WORK">Work</option>
       <option value="MOBILE">Mobile</option>
     </select>
+<<<<<<< HEAD
     <label for="type">Job role:</label>
     <select id="type" name="type" [(ngModel)]="info.role" required>
       <option value="SOFTWARE_ENGINEER">Software Engineer</option>
@@ -18,22 +26,26 @@
       <option value="MACHINE_LEARNING">Machine Learning</option>
     </select>
   
+=======
+
+>>>>>>> b7932160bd60ca6f6c76cd688a586a912cdcc709
     <label for="streetAddress">Street Address:</label>
     <input type="text" id="streetAddress" name="streetAddress" [(ngModel)]="info.streetAddress" required>
-  
+
     <label for="city">City:</label>
     <input type="text" id="city" name="city" [(ngModel)]="info.city" required>
-  
+
     <label for="state">State:</label>
     <input type="text" id="state" name="state" [(ngModel)]="info.state" required>
-  
+
     <label for="country">Country:</label>
     <input type="text" id="country" name="country" [(ngModel)]="info.country" required>
-  
+
     <label for="zipCode">Zip Code:</label>
     <input type="text" id="zipCode" name="zipCode" [(ngModel)]="info.zipCode" required>
-  
-    <button type="submit">Save</button>
-    <button type="button" [routerLink]="['/education']">Next Page</button>
+
+    <button type="submit" [disabled]="!informationForm.valid">Save</button>
+    <button type="button" [routerLink]="['/education']" [disabled]="!informationForm.valid">Next Page</button>
   </form>
-  
+</body>
+</html>

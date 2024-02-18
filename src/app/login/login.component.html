@@ -1,10 +1,28 @@
-<form (ngSubmit)="submitForm(loginForm)" #loginForm="ngForm">
-  <label for="email">Email:</label>
-  <input type="text" id="email" name="email" [(ngModel)]="credentials.email" required>
+<body>
+  <div class="container" id="container">
+    <div class="form-container log-in-container">
+      <form (ngSubmit)="submitForm(loginForm)" #loginForm="ngForm">
+        <h1>Login</h1>
+        <br>
+        <!-- Remove or modify social container and related elements as needed -->
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" [(ngModel)]="credentials.email" required>
 
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" [(ngModel)]="credentials.password" required>
-
-  <button type="submit">Login</button>
-  <button type="button" [routerLink]="['/signup']">Sign Up</button>
-</form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="credentials.password" required>
+<br><br>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-right">
+          <!-- Angular property binding for dynamic image source -->
+          <img src="../../assets/images/CVcenter-logo.png" alt="cvCenter Logo">
+          <h1>cvCenter</h1>
+          <p>Where Employers Connect with Top Talent: Your Gateway to Career Opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

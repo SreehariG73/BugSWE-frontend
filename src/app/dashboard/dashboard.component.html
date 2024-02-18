@@ -1,12 +1,16 @@
+<header>
+  <h1>Welcome to Your Dashboard</h1>
+</header>
+
 <div class="dashboard-container">
-  <h1>Welcome</h1>
+  <section>
+    <h2>Greetings, User!</h2>
+    <p>Explore the options below to manage your account.</p>
+  </section>
 
   <div class="options-box">
     <h2>Options</h2>
     <button type="button" [routerLink]="['/information']">Add Information</button>
-    <button type="button" name="option" value="update" [routerLink]="['/update']">Update Information</button>
-
-      <button type="submit">Logout</button>
-    
+    <button type="submit" (click)="logout()">Logout</button>
   </div>
 </div>

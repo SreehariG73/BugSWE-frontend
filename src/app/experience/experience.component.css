@@ -1,38 +1,107 @@
-/* Add your styles for the Experience component here */
+/* Apply global styles */
+* {
+  box-sizing: border-box;
+}
 
-#experience-container {
-    margin-bottom: 20px;
-  }
-  
-  .experience-block {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 8px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #c0392b;
-  }
-  
+body {
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  background-color: #FFFFFF;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 50px; /* Adjusted padding for top and bottom */
+  border-radius: 8px; /* Added border-radius for consistency */
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); /* Added box-shadow for depth effect */
+  max-height: 98vh; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background-color: #eee;
+  border: none;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  margin-top: 16px; /* Adjusted margin for better spacing */
+}
+
+button:hover {
+  background-color: #FF416C;
+}
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background-color: #eee;
+  border: none;
+  /* Add the following styles to adjust the height of the textarea */
+  height: 120px; /* Set the desired height */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.remove-button {
+  position: absolute; /* Position the remove button absolutely */
+  top: 0px; /* Adjust the top position */
+  right: 10px; /* Adjust the right position */
+  background-color: #FF4B2B; /* Background color */
+  color: #FFFFFF; /* Text color */
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 25px; /* Center content vertically */
+  text-align: center; /* Center content horizontally */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.remove-button:hover {
+  background-color: #FF416C; /* Change background color on hover */
+}
+.experience-block {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Adjusted width for full width */
+  margin-top: 20px; /* Adjusted margin for spacing between blocks */
+  padding: 20px; /* Added padding for inner content */
+}

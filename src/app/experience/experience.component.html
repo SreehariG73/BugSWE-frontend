@@ -1,4 +1,5 @@
-<form (ngSubmit)="submitForm()" #educationForm="ngForm"> 
+<body>
+<form (ngSubmit)="submitForm(experienceForm)" #experienceForm="ngForm"> 
 <div id="experience-container">
     <div *ngFor="let block of experienceBlocks.experienceDetails; let i = index" class="experience-block">
       <label for="positionName">Position:</label>
@@ -27,6 +28,6 @@
   </div>
   <button type="button" (click)="addExperienceBlock()">Add Experience</button>
   <button type="submit">Save</button>
-  <button type="button" [routerLink]="['/voluntarydisclosure']">Next</button>
+  <button type="button" [routerLink]="['/voluntarydisclosure']" [disabled]="!experienceForm.valid">Next</button>
   </form>
-  
+</body>
