@@ -1,10 +1,33 @@
-<form (ngSubmit)="submitForm(loginForm)" #loginForm="ngForm">
-  <label for="email">Email:</label>
-  <input type="text" id="email" name="email" [(ngModel)]="credentials.email" required>
 
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" [(ngModel)]="credentials.password" required>
+<body>
+  <div class="container" id="container">
+    <div class="form-container log-in-container">
+      <form (ngSubmit)="submitForm(loginForm)" #loginForm="ngForm">
+        <h1>Login</h1>
+        <!-- <div class="social-container">
+          <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
+          <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
+        </div>
+        <span>or use your account</span> -->
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" [(ngModel)]="credentials.email" required>
 
-  <button type="submit">Login</button>
-  <button type="button" [routerLink]="['/signup']">Sign Up</button>
-</form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="credentials.password" required>
+
+        <a href="#">Forgot your password?</a>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-right">
+          <!-- Angular property binding for dynamic image source -->
+          <img src="../../assets/images/CVcenter-logo.png" alt="cvCenter Logo">
+          <h1>cvCenter</h1>
+          <p>Where Employers Connect with Top Talent: Your Gateway to Career Opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
