@@ -15,9 +15,12 @@ export class ExperienceComponent {
       this.experienceBlocks.push({
         position: '',
         company: '',
+        company_city: '',
+        company_country: '',
         startDate: '',
         endDate: '',
         details: ''
+        
       });
     }
   
