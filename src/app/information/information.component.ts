@@ -23,5 +23,5 @@ export class InformationComponent {
       // Handle form submission logic using this.info
       console.log('Information form submitted!', this.info);
     }
-
+    
 }

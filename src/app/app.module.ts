@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { SkillsComponent } from './skills/skills.component';
 import { WeblinksComponent } from './weblinks/weblinks.component';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { WeblinksComponent } from './weblinks/weblinks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

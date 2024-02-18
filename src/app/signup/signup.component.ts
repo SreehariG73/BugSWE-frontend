@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { SignupService } from '../signup.service';
+import { HttpHeaders } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -9,14 +12,18 @@ export class SignupComponent {
   user = {
     firstName: '',
     lastName: '',
-    dateOfBirth: '',
-    email: '',
     password: '',
-    confirmPassword: ''
-  };
-
-  submitForm() {
-    // Handle form submission logic using this.user
-    console.log('Form submitted!', this.user);
+    confirmPassword: '',
+    email: '',
+    dob: '',
+    isrecruiter: false
   }
+  constructor(private signupService: SignupService) { }
+  onSubmit(form: NgForm) {
+    this.signupService.signup(this.user).subscribe((data) => {
+      form.reset();
+      console.log(data);
+    });
+  }
+
 }
