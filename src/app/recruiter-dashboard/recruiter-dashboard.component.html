@@ -3,32 +3,46 @@
     <h1>Candidate Search</h1>
     
     <div class="filters">
-        <select id="jobRole" [(ngModel)]="selectedJobRole">
+        <select id="jobRole" [(ngModel)]="filter.role">
             <option value="">Select Job Role</option>
-            <!-- Add more options here if needed -->
+            <option value="SOFTWARE_ENGINEER">Software Engineer</option>
+            <option value="DATA_SCIENTIST">Data Scientist</option>
+            <option value="QA">QA</option>
+            <option value="DATA_ENGINEER">Data Engineer</option>
+            <option value="MACHINE_LEARNING">Machine Learning</option>
         </select>
         
-        <select id="experience" [(ngModel)]="selectedExperience">
+        <select id="experience" [(ngModel)]="filter.experience">
             <option value="">Select Experience</option>
-            <!-- Add more options here if needed -->
+            <option value="1">0-1</option>
+            <option value="2">1-2</option>
+            <option value="4">2-4</option>
+            <option value="6">4-6</option>
         </select>
         
-        <select id="state" [(ngModel)]="selectedState">
+        <select id="state" [(ngModel)]="filter.location">
             <option value="">Select State</option>
-            <!-- Add more options here if needed -->
+            <option value="CA">California</option>
+            <option value="NY">New York</option>
+            <option value="TX">Texas</option>
+            <option value="WA">Washington</option>
         </select>
         
-        <select id="skill" [(ngModel)]="selectedSkill">
-            <option value="">Select Skills</option>
+        <select id="skill" [(ngModel)]="filter.skills">
+            <option value="">Select Skill</option>
+            <option *ngFor="let skill of filter.skills" [value]="skill">{{ skill }}</option>
+
         </select>
-        
+        <br><br>
+        <br><br>
         <button (click)="searchCandidates()">Search</button>
+        
     </div>
     
     <div id="resultsContainer" class="results">
         <!-- Results will be displayed here -->
         <div *ngFor="let candidate of candidates">
-          {{ candidate.name }} - {{ candidate.role }} - {{ candidate.experience }} - {{ candidate.state }}
+            {{ candidate.firstName }} {{ candidate.lastName }} - {{ candidate.userInfo.role }} - {{ candidate.userInfo.totalYearOfExp }} - {{ candidate.userInfo.state }}
         </div>
     </div>
     
@@ -38,6 +52,9 @@
             <span class="close" (click)="closeModal()">&times;</span>
             <p id="modalMessage">No candidates match the filter criteria.</p>
         </div>
+    </div>
+    <div>
+        <button type="submit" (click)="logout()">Logout</button>
     </div>
   </div>
 </body>

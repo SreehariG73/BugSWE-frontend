@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { InformationComponent } from './information/information.component';
-import { EducationComponent } from './education/education.component';
-import { VoluntaryDisclosureComponent } from './voluntary-disclosure/voluntary-disclosure.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { SkillsComponent } from './skills/skills.component';
-import { WeblinksComponent } from './weblinks/weblinks.component';
-import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
+import { LoginComponent } from '../login/login.component';
+import { SignupComponent } from '../signup/signup.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { InformationComponent } from '../information/information.component';
+import { EducationComponent } from '../education/education.component';
+import { VoluntaryDisclosureComponent } from '../voluntary-disclosure/voluntary-disclosure.component';
+import { ExperienceComponent } from '../experience/experience.component';
+import { SkillsComponent } from '../skills/skills.component';
+import { WeblinksComponent } from '../weblinks/weblinks.component';
+import { RecruiterDashboardComponent } from '../recruiter-dashboard/recruiter-dashboard.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},

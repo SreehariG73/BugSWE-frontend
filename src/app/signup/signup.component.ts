@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SignupService } from '../signup.service';
+import { SignupService } from '../services/signup.service';
 import { HttpHeaders } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 
