@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { AddlinksService } from '../addlinks.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-weblinks',
@@ -7,21 +8,16 @@ import { Router } from '@angular/router';
   styleUrl: './weblinks.component.css'
 })
 export class WeblinksComponent {
-    githubLink: string = '';
-    portfolioLink: string = '';
-    linkedinLink: string = '';
+  links={
+    githubLink:  '',
+    portfolioLink:'',
+    linkedinLink:''
+  };
   
-    constructor(private router: Router) {}
-  
+    constructor(private addLinksService: AddlinksService) {}
     submitForm() {
-      // Handle form submission logic using the link values
-      console.log('Links form submitted!', {
-        github: this.githubLink,
-        portfolio: this.portfolioLink,
-        linkedin: this.linkedinLink
+      this.addLinksService.addlinks(this.links).subscribe((data) => {
+        console.log(data);
       });
-  
-      // Redirect to the dashboard or the desired route
-      this.router.navigate(['/dashboard']);
     }
   }

@@ -4,13 +4,12 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class SignupService {
-  
-  private baseUrl = 'http://localhost:8080/user/signup';
+export class AddlinksService {
+  private baseUrl = 'http://localhost:8080/link/addlink';
   constructor(private http:HttpClient) {
    }
-   
-    signup(user: Object){
-      return this.http.post(`${this.baseUrl}`, user);
+
+    addlinks(links: Object){
+      return this.http.post(`${this.baseUrl}`, links);
     }
 }
