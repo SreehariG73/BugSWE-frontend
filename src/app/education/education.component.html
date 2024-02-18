@@ -1,6 +1,6 @@
 <body>
   <title>Education Page</title>
-<form (ngSubmit)="submitForm()" #educationForm="ngForm"> 
+<form (ngSubmit)="submitForm(educationForm)" #educationForm="ngForm"> 
   <div id="education-container">
     <div *ngFor="let block of educationBlocks.educationDetails; let i = index" class="education-block">
       <label for="universityName">University Name:</label>
@@ -22,7 +22,7 @@
       <input type="date" [(ngModel)]="block.endDate" name="endDate[]" required>
 
       <label for="gpa">GPA:</label>
-      <input type="text" [(ngModel)]="block.gpa" name="gpa[]">
+      <input type="text" [(ngModel)]="block.gpa" name="gpa[]" required>
 
       <button type="button" class="remove-button" (click)="removeEducationBlock(i)">✖</button>
     </div>
@@ -31,6 +31,6 @@
   <button type="button" (click)="addEducationBlock()">Add Education</button>
 
   <button type="submit">Save</button>
-  <button type="button" routerLink="/experience">Next</button>
+  <button type="button" routerLink="/experience" [disabled]="!educationForm.valid">Next</button>
 </form>
 </body>

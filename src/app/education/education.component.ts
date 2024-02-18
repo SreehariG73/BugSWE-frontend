@@ -45,10 +45,14 @@ export class EducationComponent {
       // console.log("herer")
       // console.log("uuid" , this.loginService.getUUID())
     }    
-  submitForm() {
-    this.addeducationService.addeducation(this.educationBlocks).subscribe((data) => {
-      console.log(data);
-    });
+  submitForm(educationForm: NgForm) {
+    if (educationForm.valid) {
+      this.addeducationService.addeducation(this.educationBlocks).subscribe((data) => {
+        console.log(data);
+      });
+    } else {
+      console.log('Form is not valid. Please fill in all required fields.');
+    }
   }
 
   removeEducationBlock(index: number) {
