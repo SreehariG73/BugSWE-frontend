@@ -9,6 +9,7 @@ import { VoluntaryDisclosureComponent } from './voluntary-disclosure/voluntary-d
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WeblinksComponent } from './weblinks/weblinks.component';
+import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'voluntarydisclosure',component:VoluntaryDisclosureComponent},
   {path:'experience',component:ExperienceComponent},
   {path:'skills',component:SkillsComponent},
-  {path:'weblinks',component:WeblinksComponent}];
+  {path:'weblinks',component:WeblinksComponent},
+  {path:'recruiterDashboard',component:RecruiterDashboardComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

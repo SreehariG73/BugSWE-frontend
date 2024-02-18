@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { InformationService } from '../information.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-information',
@@ -7,10 +9,8 @@ import { Component } from '@angular/core';
 })
 export class InformationComponent {
     info = {
-      firstName: '',
-      lastName: '',
       phoneNumber: '',
-      phoneType: 'home',
+      type: 'HOME',
       streetAddress: '',
       city: '',
       state: '',
@@ -19,9 +19,12 @@ export class InformationComponent {
       // ... other properties
     };
   
+    
+    constructor(private informationService: InformationService) { }
     submitForm() {
-      // Handle form submission logic using this.info
-      console.log('Information form submitted!', this.info);
-    }
+    this.informationService.addInfo(this.info).subscribe((data) => {
+    console.log(data);
+    });
+  }
     
 }
