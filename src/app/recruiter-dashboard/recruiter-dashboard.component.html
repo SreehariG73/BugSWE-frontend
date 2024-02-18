@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Candidate Search</h1>
+    
+    <div class="filters">
+        <select id="jobRole" [(ngModel)]="selectedJobRole">
+            <option value="">Select Job Role</option>
+            <!-- Add more options here if needed -->
+        </select>
+        
+        <select id="experience" [(ngModel)]="selectedExperience">
+            <option value="">Select Experience</option>
+            <!-- Add more options here if needed -->
+        </select>
+        
+        <select id="state" [(ngModel)]="selectedState">
+            <option value="">Select State</option>
+            <!-- Add more options here if needed -->
+        </select>
+        
+        <select id="skill" [(ngModel)]="selectedSkill">
+            <option value="">Select Skills</option>
+        </select>
+        
+        <button (click)="searchCandidates()">Search</button>
+    </div>
+    
+    <div id="resultsContainer" class="results">
+        <!-- Results will be displayed here -->
+        <div *ngFor="let candidate of candidates">
+          {{ candidate.name }} - {{ candidate.role }} - {{ candidate.experience }} - {{ candidate.state }}
+        </div>
+    </div>
+    
+    <!-- Modal Popup -->
+    <div id="myModal" class="modal" *ngIf="showModal">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <p id="modalMessage">No candidates match the filter criteria.</p>
+        </div>
+    </div>
+  </div>
+  
