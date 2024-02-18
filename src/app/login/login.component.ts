@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  credentials = {
+    username: '',
+    password: ''
+  };
 
+  submitForm() {
+    // Handle login logic using this.credentials
+    console.log('Login form submitted!', this.credentials);
+  }
 }
+

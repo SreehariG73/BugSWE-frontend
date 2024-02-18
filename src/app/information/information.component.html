@@ -1,0 +1,36 @@
+<form (ngSubmit)="submitForm()" #informationForm="ngForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="info.firstName" required>
+  
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="info.lastName" required>
+  
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="info.phoneNumber" required>
+  
+    <label for="phoneType">Type for Phone Number:</label>
+    <select id="phoneType" name="phoneType" [(ngModel)]="info.phoneType" required>
+      <option value="home">Home</option>
+      <option value="work">Work</option>
+      <option value="mobile">Mobile</option>
+    </select>
+  
+    <label for="streetAddress">Street Address:</label>
+    <input type="text" id="streetAddress" name="streetAddress" [(ngModel)]="info.streetAddress" required>
+  
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" [(ngModel)]="info.city" required>
+  
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" [(ngModel)]="info.state" required>
+  
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" [(ngModel)]="info.country" required>
+  
+    <label for="zipCode">Zip Code:</label>
+    <input type="text" id="zipCode" name="zipCode" [(ngModel)]="info.zipCode" required>
+  
+    <button type="submit">Save</button>
+    <button type="button" [routerLink]="['/education']">Next Page</button>
+  </form>
+  
