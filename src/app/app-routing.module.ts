@@ -10,3 +10,4 @@ const routes: Routes = [{path: '', component: LoginComponent}, {path:'signup', c
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
